@@ -5,16 +5,16 @@ package com.leetcode.problems.algorithm;
  */
 public class PalindromeNumber {
     public boolean isPalindrome(int x) {
-        if(x < 0 || x > 0 && x % 10==0) {
+        if (x < 0 || x > 0 && x % 10 == 0) {
             return false;
         }
         int y = 0;
-        while(x / 10 > y) {
+        while (x / 10 > y) {
             int temp = x % 10;
             y = y * 10 + temp;
             x = x / 10;
         }
-        if(x == y) {
+        if (x == y) {
             return true;
         } else {
             return x / 10 == y;

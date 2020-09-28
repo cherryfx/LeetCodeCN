@@ -21,7 +21,7 @@ public class MinimumDepthOfBinaryTree {
 
     public int minDepth(TreeNode root) {
         int depth = 0;
-        if(root == null) {
+        if (root == null) {
             return depth;
         }
         int i = firstVisit(root, depth);
@@ -31,16 +31,16 @@ public class MinimumDepthOfBinaryTree {
     public int firstVisit(TreeNode root, int depth) {
         depth++;
         int left = Integer.MAX_VALUE, right = Integer.MAX_VALUE;
-        if(root.left != null) {
+        if (root.left != null) {
             left = firstVisit(root.left, depth);
         }
-        if(root.right != null) {
+        if (root.right != null) {
             right = firstVisit(root.right, depth);
         }
-        if(root.left == null && root.right == null) {
+        if (root.left == null && root.right == null) {
             return depth;
         }
-        if(left > right) {
+        if (left > right) {
             return right;
         } else {
             return left;

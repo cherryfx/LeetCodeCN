@@ -25,22 +25,22 @@ public class LongestSubstringWithoutRepeatingCharacters {
         char[] chars = s.toCharArray();
         Map<Character, Integer> maps = new HashMap<>();
         int maxLenght = 0, start = 0;
-        for(int index=0; index<chars.length; index++) {
+        for (int index = 0; index < chars.length; index++) {
             Integer integer = maps.get(chars[index]);
-            if(integer < start) {
+            if (integer < start) {
                 continue;
             }
-            if(index == chars.length - 1) {
-                if(integer == null) {
-                    if(maxLenght < index - start + 1) {
+            if (index == chars.length - 1) {
+                if (integer == null) {
+                    if (maxLenght < index - start + 1) {
                         maxLenght = index - start + 1;
                     }
                 }
             }
             maps.put(chars[index], index);
-            if(integer != null) {
+            if (integer != null) {
 
-                if(maxLenght < index - start) {
+                if (maxLenght < index - start) {
                     maxLenght = index - start;
                 }
                 start = integer + 1;

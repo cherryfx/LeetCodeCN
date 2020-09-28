@@ -24,13 +24,13 @@ public class ShortestPalindrome {
         StringBuilder sb = new StringBuilder();
         String s1 = sb.append(s).reverse().toString();
 
-        if(s.equals(s1)) {
+        if (s.equals(s1)) {
             return s;
         }
 
         int padding = 0;
-        while(true) {
-            if(!s.substring(0, s.length() -padding).equals(s1.substring(padding))) {
+        while (true) {
+            if (!s.substring(0, s.length() - padding).equals(s1.substring(padding))) {
                 padding++;
             } else {
                 break;

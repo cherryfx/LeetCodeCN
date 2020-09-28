@@ -11,12 +11,12 @@ public class KeysAndRooms {
         Set<Integer> roomSet = new HashSet<>();
         LinkedList<Integer> keys = new LinkedList<>();
         keys.add(0);
-        while(keys.size() > 0) {
+        while (keys.size() > 0) {
             Integer pop = keys.pop();
             List<Integer> integers = rooms.get(pop);
             roomSet.add(pop);
             for (Integer integer : integers) {
-                if(!roomSet.contains(integer)) {
+                if (!roomSet.contains(integer)) {
                     keys.add(integer);
                 }
             }

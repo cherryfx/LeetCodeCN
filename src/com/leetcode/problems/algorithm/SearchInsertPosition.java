@@ -17,15 +17,15 @@ public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int left = 0, right = nums.length;
         int mid = 0;
-        while(left < right) {
+        while (left < right) {
             mid = (right - left) / 2 + left;
-            if(nums[mid] > target) {
-                if(right == mid) {
+            if (nums[mid] > target) {
+                if (right == mid) {
                     mid--;
                 }
                 right = mid;
-            } else if(nums[mid] < target) {
-                if(left == mid) {
+            } else if (nums[mid] < target) {
+                if (left == mid) {
                     mid++;
                 }
                 left = mid;

@@ -16,17 +16,17 @@ public class CombinationSumII {
     }
 
     public void dfs(int[] candidates, int target, int current, int sum, Deque<Integer> inner, List<List<Integer>> result) {
-        if(sum > target) {
+        if (sum > target) {
             return;
         }
-        if(sum == target) {
+        if (sum == target) {
             result.add(new ArrayList<>(inner));
-            return ;
+            return;
         }
-        for(int i=current; i< candidates.length; i++) {
+        for (int i = current; i < candidates.length; i++) {
             inner.addLast(candidates[i]);
-            dfs(candidates, target, i+1, candidates[i] + sum, inner, result);
-            while(i+1 < candidates.length && candidates[i] == candidates[i + 1]) {
+            dfs(candidates, target, i + 1, candidates[i] + sum, inner, result);
+            while (i + 1 < candidates.length && candidates[i] == candidates[i + 1]) {
                 i++; //同一层for循环中，跳过所有重复项
             }
             inner.removeLast();

@@ -8,7 +8,7 @@ public class RomanToInteger {
 
         for (char c : chars) {
             int v = 0;
-            switch(c) {
+            switch (c) {
                 case 'I':
                     v = 1;
                     break;
@@ -32,7 +32,7 @@ public class RomanToInteger {
                     break;
             }
             sum += v;
-            if(v > lastValue) {
+            if (v > lastValue) {
                 sum -= 2 * lastValue;
             }
             lastValue = v;

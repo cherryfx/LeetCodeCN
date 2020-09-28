@@ -19,14 +19,14 @@ public class Combinations {
 //        if(n - current + 1 < k) {
 //            return;
 //        }
-        if(inner.size() == k) {
+        if (inner.size() == k) {
             result.add(new ArrayList<>(inner));
             return;
         }
 
-        for(int i=current; i<=n; i++) {
+        for (int i = current; i <= n; i++) {
             inner.addLast(i);
-            dfs(i+1, n, k);
+            dfs(i + 1, n, k);
             inner.removeLast();
         }
     }

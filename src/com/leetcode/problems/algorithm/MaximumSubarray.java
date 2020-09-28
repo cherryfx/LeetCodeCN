@@ -6,6 +6,7 @@ package com.leetcode.problems.algorithm;
 public class MaximumSubarray {
     /**
      * DP 算法
+     *
      * @param nums
      * @return
      */
@@ -29,14 +30,14 @@ public class MaximumSubarray {
 
         int max = nums[0];
         int current = nums[0];
-        for(int i=1; i<nums.length; i++) {
-            if(current > 0) {
+        for (int i = 1; i < nums.length; i++) {
+            if (current > 0) {
                 current = current + nums[i];
             } else {
                 current = nums[i];
             }
 
-            if(max < current) {
+            if (max < current) {
                 max = current;
             }
         }

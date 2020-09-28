@@ -1,11 +1,15 @@
 package com.leetcode.problems.algorithm;
 
 /**
- * Definition for singly-linked list.*/
+ * Definition for singly-linked list.
+ */
 class ListNode {
-     int val;
-     ListNode next;
-     ListNode(int x) { val = x; }
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
 }
 
 public class AddTwoNumbers {
@@ -42,24 +46,24 @@ public class AddTwoNumbers {
 
         ListNode head = null, currentNode = null;
 
-        while(l1 != null || l2 != null) {
+        while (l1 != null || l2 != null) {
             int v1 = 0, v2 = 0;
-            if(l1 != null) {
+            if (l1 != null) {
                 v1 = l1.val;
                 l1 = l1.next;
             }
-            if(l2 != null) {
+            if (l2 != null) {
                 v2 = l2.val;
                 l2 = l2.next;
             }
             int s = v1 + v2 + overflow;
-            if(s > 9) {
+            if (s > 9) {
                 s = s - 10;
                 overflow = 1;
             } else {
                 overflow = 0;
             }
-            if(head == null) {
+            if (head == null) {
                 head = new ListNode(s);
                 currentNode = head;
             } else {
@@ -71,7 +75,7 @@ public class AddTwoNumbers {
         }
 
 
-        if(overflow == 1) {
+        if (overflow == 1) {
             currentNode.next = new ListNode(1);
         }
 

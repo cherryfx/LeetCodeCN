@@ -5,9 +5,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class PrintIOrder {
 
 
-
-
-
 }
 
 class Foo {
@@ -26,7 +23,7 @@ class Foo {
     }
 
     public void second(Runnable printSecond) throws InterruptedException {
-        while(flag != 1) {
+        while (flag != 1) {
 
         }
         // printSecond.run() outputs "second". Do not change or remove this line.

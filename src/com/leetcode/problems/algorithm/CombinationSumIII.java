@@ -35,13 +35,13 @@ public class CombinationSumIII {
             return;
         } else if (size == k && n != 0) {
             return;
-        } else if (size == k && n== 0) {
+        } else if (size == k && n == 0) {
             result.add(new ArrayList<>(inner));
             return;
         }
         for (int i = current + 1; i <= 9; i++) {
             inner.addLast(i);
-            dfs(k, n-i, i, result, inner);
+            dfs(k, n - i, i, result, inner);
             inner.removeLast();
         }
     }

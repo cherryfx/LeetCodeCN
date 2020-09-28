@@ -8,7 +8,6 @@ public class JohnsBackyardGarden {
         jbg.isBuild(10);
 
 
-
     }
 
 
@@ -18,21 +17,21 @@ public class JohnsBackyardGarden {
      */
     public String isBuild(int x) {
         // write you code here
-        boolean[] flags = new boolean[x+1];
+        boolean[] flags = new boolean[x + 1];
 
         flags[0] = true;
 
-        for(int i=1; i<flags.length; i++) {
+        for (int i = 1; i < flags.length; i++) {
             flags[i] = false;
-            if(i >= 3 && flags[i-3]) {
+            if (i >= 3 && flags[i - 3]) {
                 flags[i] = true;
                 continue;
             }
-            if(i >= 7 && flags[i-7]) {
+            if (i >= 7 && flags[i - 7]) {
                 flags[i] = true;
             }
         }
-        if(flags[x]) {
+        if (flags[x]) {
             return "YES";
         }
         return "NO";

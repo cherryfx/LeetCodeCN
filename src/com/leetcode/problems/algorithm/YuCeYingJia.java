@@ -6,10 +6,8 @@ public class YuCeYingJia {
     }
 
 
-
-
     public int total(int[] nums, int start, int end, int turn) {
-        if(start == end) {
+        if (start == end) {
             return nums[start] * turn;
         }
 

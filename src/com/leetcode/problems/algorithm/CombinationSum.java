@@ -18,14 +18,14 @@ public class CombinationSum {
 
     public void dfs(int[] candidates, int target, int sum, int currentIndex) {
 
-        if(sum >target) {
+        if (sum > target) {
             return;
         }
-        if(sum == target) {
+        if (sum == target) {
             result.add(new ArrayList<>(inner));
         }
 
-        for(int i=currentIndex; i< candidates.length; i++) {
+        for (int i = currentIndex; i < candidates.length; i++) {
             int candidate = candidates[i];
             inner.addLast(candidate);
             dfs(candidates, target, candidate + sum, i);
